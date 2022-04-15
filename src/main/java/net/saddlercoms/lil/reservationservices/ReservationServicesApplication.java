@@ -1,13 +1,13 @@
-package net.saddlercoms.lil.guestservices;
+package net.saddlercoms.lil.reservationservices;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GuestServicesApplication {
+public class ReservationServicesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GuestServicesApplication.class, args);
+		SpringApplication.run(ReservationServicesApplication.class, args);
 	}
 
 }
