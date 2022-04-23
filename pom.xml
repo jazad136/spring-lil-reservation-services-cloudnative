@@ -10,12 +10,13 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>net.saddlercoms.lil</groupId>
-	<artifactId>guest-services</artifactId>
+	<artifactId>guest-reservation-services</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>guest-services</name>
+	<name>guest-reservation-services</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
+		<spring.cloud.version>2021.0.1</spring.cloud.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -41,6 +42,10 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-client</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -51,5 +56,19 @@
 			</plugin>
 		</plugins>
 	</build>
-
+	<dependencyManagement><dependencies>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-dependencies</artifactId>
+			<version>${spring.cloud.version}</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
+	</dependencies></dependencyManagement>
+	<repositories><repository>
+		<id>spring-milestones</id>
+		<name>Spring Milestones</name>
+		<url>https://repo.spring.io/milestone</url>
+	</repository></repositories>
+	
 </project>
